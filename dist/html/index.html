@@ -1,86 +1,53 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>静态模板</title>
-		<link rel="stylesheet" type="text/css" href="../css/style.css">
-		<script src="../../app/js/jquery-1.8.3.min.js"></script>
-		<script src="../../module/swiper/idangerous.swiper.min.js"></script>
-	</head>
-	<body>
-		<div class="containter">
-			<div class="nav">
-	<ul class="nav_u">
-		<li class="nav_l"><a href="" class="nav_a">首页</a></li>
-		<li class="nav_l">
-			<a href="" class="nav_a">民院新闻</a>
-			<ul class="n_u">
-				<li class="n_l"><a href="" class="n_a">首页</a></li>
-				<li class="n_l"><a href="" class="n_a">首页</a></li>
-				<li class="n_l"><a href="" class="n_a">首页</a></li>
-				<li class="n_l"><a href="" class="n_a">首页</a></li>
-				<li class="n_l"><a href="" class="n_a">首页</a></li>
-				<li class="n_l"><a href="" class="n_a">首页</a></li>
-				<li class="n_l"><a href="" class="n_a">首页</a></li>
-			</ul>
-		</li>
-		<li class="nav_l"><a href="" class="nav_a">校园传真</a></li>
-		<li class="nav_l"><a href="" class="nav_a">媒体看民院</a></li>
-		<li class="nav_l"><a href="" class="nav_a">教学科研</a></li>
-		<li class="nav_l"><a href="" class="nav_a">校园文坛</a></li>
-		<li class="nav_l"><a href="" class="nav_a">人物言论</a></li>
-		<li class="nav_l"><a href="" class="nav_a">校园影像</a></li>
-		<li class="nav_l"><a href="" class="nav_a">专题活动</a></li>
-	</ul>
-</div>
 
-			<div class="device">
-	<div class="swiper-container">
-		<span class="arrow-left"></span>
-		<span class="arrow-right"></span>
-		<div class="swiper-wrapper">
-			<a href="" target="_blank" class="swiper-slide">
-				<img src="http://souce.qiniudn.com/a_02.jpg?imageView2/1/w/640/h/300" alt="图片描述">
-				<div class="p">
-					<p>图片文章标题图片文章标题图片文章标题图片文章标题图片文章标题图片文章标题图片文章标题图片文章标题图片文</p>
-				</div>
-				<div class="bg"></div>
-			</a>
-			<a href="" target="_blank" class="swiper-slide">
-				<img src="http://souce.qiniudn.com/a_01.jpg?imageView2/1/w/640/h/300" alt="图片描述">
-				<div class="p">
-					<p>图片文章标题图片文章标题图片</p>
-				</div>
-				<div class="bg"></div>
-			</a>
-			<a href="" target="_blank" class="swiper-slide">
-				<img src="http://souce.qiniudn.com/a_03.jpg?imageView2/1/w/640/h/300" alt="图片描述">
-			</a>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+	<title>静态模板</title>
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+</head>
+
+<body>
+	<div class="containter">
+		<div class="div1">
+
 		</div>
-		<div class="pagination"></div>
+		<!-- <div class="divd"> -->
+			<div class="div2">
+				<div class="div5">
+					<span class="d1">
+						2356467890
+					</span>
+					<span class="d1">
+						235646789888880
+					</span>
+				</div>
+				<div class="div6">
+
+				</div>
+				<div class="div7">
+
+				</div>
+				<div class="div8">
+
+				</div>
+				<div class="div9">
+
+				</div>
+				<div class="div10">
+
+				</div>
+			</div>
+		<!-- </div> -->
+		<!-- <div class="div3">
+
+		</div>
+		<div class="div4">
+
+		</div> -->
 	</div>
-</div>
-<script>
-	var mySwiper = new Swiper('.swiper-container', {
-		pagination: '.pagination', //定义一个Swiper的分页器
-		loop: true, //设置为true 则开启loop模式,默认：false
-		autoplay: 3000, //自动切换的时间间隔（单位ms），不设定该参数slide不会自动切换
-		autoplayDisableOnInteraction: false, //用户操作swiper之后，是否禁止autoplay。默认为true：停止。
-		keyboardControl: true, //是否开启键盘控制Swiper切换
-		grabCursor: true,
-		paginationClickable: true //值为true时，点击分页器的指示点时会发生Swiper。默认：false
-	})
-	$('.arrow-left').on('click', function(e) {
-		e.preventDefault()
-		mySwiper.swipePrev()
-	})
-	$('.arrow-right').on('click', function(e) {
-		e.preventDefault()
-		mySwiper.swipeNext()
-	})
-</script>
+</body>
 
-		</div>
-	</body>
 </html>

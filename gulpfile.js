@@ -31,28 +31,26 @@ var webpackConfig = require('./webpack.config')
  * 编译less样式文件
  */
 gulp.task('less', function() {
-    gulp.src('app/less/style.less')
+    gulp.src(['./app/less/*.less', '!app/less/*.layout.less'])
         // .pipe(sourcemaps.init())
         .pipe(less())
         // .pipe(sourcemaps.write())
-        // .pipe(rename({
-        //     suffix: '.map'
-        // }))
         .pipe(gulp.dest('dist/css/'))
         .pipe(cleanCSS({
             compatibility: 'ie8'
         }))
-        .pipe(rename('style-min.css'))
+        .pipe(rename({
+            suffix: '-min'
+        }))
         .pipe(gulp.dest('dist/css/'))
 })
 
 gulp.task('map', function() {
-    gulp.src('app/less/style.less')
+    gulp.src(['./app/less/*.less', '!app/less/*.layout.less'])
         .pipe(sourcemaps.init())
         .pipe(less())
         .pipe(sourcemaps.write())
-        .pipe(rename('style-map.css'))
-        .pipe(gulp.dest('dist/css/'))
+        .pipe(gulp.dest('dist/map/'))
 })
 
 /*
@@ -137,7 +135,7 @@ gulp.task('webserver', function() {
 })
 
 gulp.task('watch', function() {
-    gulp.watch(['app/less/*.less', 'module/*/*.less'], ['less','map'])
+    gulp.watch(['app/less/*.less', 'module/*/*.less'], ['less', 'map'])
     gulp.watch(['app/sass/*.scss'], ['sass'])
     gulp.watch(['app/html/*', 'module/*/*.html'], ['html'])
     gulp.watch(['app/*.js', 'app/**/*.js', '!app/**/bundle.js', 'app/less/*.less', 'module/*/*.less', 'app/sass/*.scss'], ['web'])

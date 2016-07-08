@@ -8,6 +8,29 @@
     -moz-box-sizing: @border-box;
     -webkit-box-sizing: @border-box;
 }
+.flex() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+//左右居中
+.justify-content(@justify-content:center) {
+    justify-content: @justify-content;
+    -moz-box-pack: @justify-content;
+    -webkit-box-pack: @justify-content;
+    box-pack: @justify-content;
+}
+//上下居中
+.align-items(@align-items:center) {
+    align-items: @align-items;
+    -moz-box-align: @align-items;
+    -webkit-box-align: @align-items;
+    box-align: @align-items;
+    -webkit-align-content: @align-items;
+    align-content: @align-items;
+}
 //透明度
 .opacity(@opacity:.5) {
     opacity: @opacity;
@@ -31,23 +54,23 @@
 * {
     margin: 0;
     padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+    .box-sizing();
 }
 html {
-    font-size: 14px;
+    font-size: 62.5%;
     width: 100%;
     overflow-x: hidden;
 }
-
 /* 设置默认字体 */
 body,
-button, input, select, textarea { /* for ie */
+button,
+input,
+select,
+textarea {
+    /* for ie */
     font-size: 14px;
     font-family: PingFangSC-Light,'helvetica neue','hiragino sans gb',tahoma,'microsoft yahei ui','microsoft yahei',simsun,sans-serif;
 }
-
 a,
 a:hover {
     outline: none;
@@ -60,26 +83,34 @@ a:hover {
     color: #288f54;
     text-decoration: underline;
 }
-
-fieldset, img { border: none; } /* img 搭车：让链接里的 img 无边框 */
-
-address, cite, dfn, em, var { font-style: normal; } /* 将斜体扶正 */
-
+fieldset,
+img {
+    border: none;
+}
+/* img 搭车：让链接里的 img 无边框 */
+address,
+cite,
+dfn,
+em,
+var {
+    font-style: normal;
+}
+/* 将斜体扶正 */
 /* 重置列表元素 */
-ul, ol { list-style: none; }
-
+ol,
+ul {
+    list-style: none;
+}
 /* 重置表格元素 */
 table {
     border-collapse: collapse;
     border-spacing: 0;
 }
-
 /* 重置 hr */
 hr {
     border: none;
     height: 1px;
 }
-
 .containter {
     width: 1180px;
     margin: 0 auto;
