@@ -8,7 +8,7 @@ module.exports = {
 	output: {
 		// path: path.resolve(__dirname, '../build'),
 		path: __dirname,
-		filename: 'app/js/bundle.js'
+		filename: 'app/bundle.js'
 	},
 	module: {
 		loaders: [{
@@ -38,7 +38,7 @@ module.exports = {
 		}]
 	},
 	plugins: [
-			new ExtractTextPlugin("dist/css/style.css")
+			new ExtractTextPlugin("dist/css/webpack.css")
 		]
 		// devtool: 'source-map'
 }

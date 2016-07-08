@@ -1,5 +1,6 @@
 var gulp = require('gulp')
 var fs = require('fs')
+var runSequence = require('run-sequence')
 var livereload = require('gulp-livereload')
 var webpack = require("gulp-webpack")
 var connect = require('gulp-connect')
@@ -7,7 +8,6 @@ var connect = require('gulp-connect')
 var less = require('gulp-less')
 var sass = require('gulp-sass')
 var csscomb = require('gulp-csscomb')
-var postcss = require('gulp-postcss')
 var autoprefixer = require('autoprefixer')
 var cleanCSS = require('gulp-clean-css');
 var sourcemaps = require('gulp-sourcemaps')
@@ -32,13 +32,18 @@ var webpackConfig = require('./webpack.config')
  */
 gulp.task('less', function() {
     gulp.src('app/less/style.less')
-        .pipe(sourcemaps.init())
+        // .pipe(sourcemaps.init())
         .pipe(less())
-        .pipe(sourcemaps.write())
+        // .pipe(sourcemaps.write())
         // .pipe(rename({
         //     suffix: '.map'
         // }))
-        .pipe(rename('style-map.css'))
+        .pipe(rename('style.css'))
+        .pipe(gulp.dest('dist/css/'))
+        .pipe(cleanCSS({
+            compatibility: 'ie8'
+        }))
+        .pipe(rename('style-min.css'))
         .pipe(gulp.dest('dist/css/'))
 })
 
@@ -53,20 +58,6 @@ gulp.task('sass', function() {
         .pipe(rename({
             suffix: '.map'
         }))
-        .pipe(gulp.dest('dist/css/'))
-})
-
-/*
- * 替换样式文件中的图片路径
- */
-gulp.task('rev', function() {
-    gulp.src(['rev-manifest.json', 'dist/css/style.css'])
-        .pipe(revCollector())
-        .pipe(gulp.dest('dist/css/'))
-        .pipe(cleanCSS({
-            compatibility: 'ie8'
-        }))
-        .pipe(rename('style-min.css'))
         .pipe(gulp.dest('dist/css/'))
 })
 
@@ -87,12 +78,33 @@ gulp.task('js', function() {
         .pipe(gulp.dest('dist/js'))
 })
 
+/*
+ * 用webpack编译打包样式文件
+ */
 gulp.task("webpack", function() {
     gulp.src('./app/app.js')
         .pipe(webpack(webpackConfig))
         .pipe(gulp.dest('.'))
         .pipe(connect.reload())
 })
+
+/*
+ * 替换样式文件中的图片路径
+ */
+gulp.task('rev', function() {
+    gulp.src(['rev-manifest.json', 'dist/css/webpack.css'])
+        .pipe(revCollector())
+        // .pipe(gulp.dest('dist/css/'))
+        .pipe(cleanCSS({
+            compatibility: 'ie8'
+        }))
+        .pipe(rename('webpack-min.css'))
+        .pipe(gulp.dest('dist/css/'))
+})
+
+gulp.task('web', function(cb) {
+    runSequence('webpack', 'rev', cb);
+});
 
 /*
  * html模板文件编译
@@ -111,7 +123,7 @@ gulp.task('html', function() {
 
 gulp.task('webserver', function() {
     connect.server({
-        port: 3001,
+        port: 3000,
         livereload: true
     })
 })
@@ -119,12 +131,15 @@ gulp.task('webserver', function() {
 gulp.task('watch', function() {
     gulp.watch(['app/less/*.less', 'module/*/*.less'], ['less'])
     gulp.watch(['app/sass/*.scss'], ['sass'])
-    gulp.watch(['app/*.js', 'app/**/*.js', '!app/**/bundle.js', 'app/less/*.less', 'module/*/*.less', 'app/sass/*.scss'], ['webpack'])
-    gulp.watch(['dist/css/style.css'], ['rev'])
     gulp.watch(['app/html/*', 'module/*/*.html'], ['html'])
+    gulp.watch(['app/*.js', 'app/**/*.js', '!app/**/bundle.js', 'app/less/*.less', 'module/*/*.less', 'app/sass/*.scss'], ['web'])
 })
 
 gulp.task('default', [
     'webserver',
     'watch'
 ])
+
+// gulp.task('default', function(cb) {
+//     runSequence('webserver', 'web', 'watch', cb);
+// });

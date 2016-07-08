@@ -26,7 +26,6 @@
     "gulp-file-include": "^0.13.7",
     "gulp-less": "^3.0.5",
     "gulp-livereload": "^3.8.1",
-    "gulp-postcss": "^6.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-rev": "^7.0.0",
     "gulp-rev-collector": "^1.0.3",
@@ -40,6 +39,7 @@
     "sass-loader": "^3.2.0",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
+    "run-sequence": "^1.2.1",
     "webpack": "^1.12.14",
     "webpack-dev-server": "^1.14.1"
   }
