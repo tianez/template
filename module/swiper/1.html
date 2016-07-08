@@ -1,0 +1,45 @@
+<div class="device">
+	<div class="swiper-container">
+		<span class="arrow-left"></span>
+		<span class="arrow-right"></span>
+		<div class="swiper-wrapper">
+			<a href="" target="_blank" class="swiper-slide">
+				<img src="http://souce.qiniudn.com/a_02.jpg?imageView2/1/w/640/h/300" alt="图片描述">
+				<div class="p">
+					<p>图片文章标题图片文章标题图片文章标题图片文章标题图片文章标题图片文章标题图片文章标题图片文章标题图片文</p>
+				</div>
+				<div class="bg"></div>
+			</a>
+			<a href="" target="_blank" class="swiper-slide">
+				<img src="http://souce.qiniudn.com/a_01.jpg?imageView2/1/w/640/h/300" alt="图片描述">
+				<div class="p">
+					<p>图片文章标题图片文章标题图片</p>
+				</div>
+				<div class="bg"></div>
+			</a>
+			<a href="" target="_blank" class="swiper-slide">
+				<img src="http://souce.qiniudn.com/a_03.jpg?imageView2/1/w/640/h/300" alt="图片描述">
+			</a>
+		</div>
+		<div class="pagination"></div>
+	</div>
+</div>
+<script>
+	var mySwiper = new Swiper('.swiper-container', {
+		pagination: '.pagination', //定义一个Swiper的分页器
+		loop: true, //设置为true 则开启loop模式,默认：false
+		autoplay: 3000, //自动切换的时间间隔（单位ms），不设定该参数slide不会自动切换
+		autoplayDisableOnInteraction: false, //用户操作swiper之后，是否禁止autoplay。默认为true：停止。
+		keyboardControl: true, //是否开启键盘控制Swiper切换
+		grabCursor: true,
+		paginationClickable: true //值为true时，点击分页器的指示点时会发生Swiper。默认：false
+	})
+	$('.arrow-left').on('click', function(e) {
+		e.preventDefault()
+		mySwiper.swipePrev()
+	})
+	$('.arrow-right').on('click', function(e) {
+		e.preventDefault()
+		mySwiper.swipeNext()
+	})
+</script>

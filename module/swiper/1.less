@@ -1,0 +1,96 @@
+@import 'idangerous.swiper.less';
+.device {
+    @hover: #f00;//a：hover字体颜色
+    width: 640px;
+    height: 300px;
+    position: relative;
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+        .swiper-slide {
+            display: inline-block;
+            position: relative;
+            box-sizing: border-box;
+            height: 100%;
+            overflow: hidden;
+            img {
+                display: block;
+                position: relative;
+                z-index: 1;
+            }
+            .p {
+                position: relative;
+                cursor: pointer;
+                left: 0;
+                bottom: 40px;
+                padding: 0 15px;
+                z-index: 99;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                color: #fff;
+                font-size: 16px;
+                p {
+                    width: 100%;
+                    .text-overflow();
+                }
+            }
+            .bg {
+                display: block;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                _bottom: 0;
+                background: #000;
+                width: 100%;
+                height: 40px;
+                z-index: 90;
+                .opacity(.5);
+            }
+            &:hover {
+                p {
+                    color: @hover;
+                }
+            }
+        }
+    }
+    .arrow-left,
+    .arrow-right {
+        position: absolute;
+        z-index: 999;
+        top: 50%;
+        margin-top: -15px;
+        width: 17px;
+        height: 30px;
+        cursor: pointer;
+    }
+    .arrow-left {
+        background: url(../images/arrows.png) no-repeat left top;
+        left: 10px;
+    }
+    .arrow-right {
+        background: url(../images/arrows.png) no-repeat left bottom;
+        right: 10px;
+    }
+    .pagination {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 20px;
+        width: 100%;
+        text-align: center;
+        .swiper-pagination-switch {
+            font-size: 0;
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 10px;
+            background: #999;
+            margin: 0 3px;
+            cursor: pointer;
+        }
+        .swiper-active-switch {
+            background: #fff;
+        }
+    }
+}

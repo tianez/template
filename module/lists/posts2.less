@@ -1,0 +1,81 @@
+.posts2 {
+    width: 1180px;
+    margin: 0 auto;
+    padding-top: 35px;
+    .article-item {
+        position: relative;
+        float: left;
+        display: block;
+        width: 550px;
+        line-height: 1.5;
+        margin: 0 20px 40px;
+        *margin: 0 19px 40px;
+        _margin: 0 15px 40px;
+        color: #4f4f4f;
+        background-color: #fff;
+        border: 1px solid #e8e8e8;
+        -webkit-transition: box-shadow 0.3s ease-in,-webkit-transform 0.2s ease-in;
+        transition: box-shadow 0.3s ease-in,transform 0.2s ease-in;
+        .item-banner {
+            height: 200px;
+            overflow: hidden;
+            background-size: 100% auto;
+            img {
+                width: 550px;
+                height: 200px;
+            }
+        }
+        .item-title {
+            padding: 12px 20px 0;
+            h3 {
+                width: 100%;
+                overflow: hidden;
+                font-size: 20px;
+                font-weight: 400;
+                white-space: nowrap;
+                word-wrap: normal;
+                text-overflow: ellipsis;
+                word-break: break-all;
+                a {
+                    color: #4f4f4f;
+                }
+            }
+        }
+        .item-footer {
+            padding: 0 20px 12px;
+            height: 36px;
+            line-height: 24px;
+            font-size: 16px;
+            .author {
+                float: left;
+            }
+            .count {
+                float: right;
+                li {
+                    float: left;
+                    margin-left: 15px;
+                    background-image: url(../images/icon@1x.png);
+                    background-repeat: no-repeat;
+                    color: #d2d2d2;
+                }
+                .view {
+                    padding-left: 25px;
+                    background-position: 0 5px;
+                }
+                .like {
+                    padding-left: 20px;
+                    background-position: 0 -13px;
+                }
+                .comments {
+                    padding-left: 20px;
+                    background-position: 0 -35px;
+                }
+            }
+        }
+        &:hover {
+            -webkit-transform: translate(0,-2px);
+            transform: translate(0,-2px);
+            box-shadow: 0 3px 10px rgba(0,0,0,.06);
+        }
+    }
+}

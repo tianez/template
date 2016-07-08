@@ -1,0 +1,77 @@
+.border-radius(@radius:5px) {
+    border-radius: @radius;
+    -moz-border-radius: @radius;
+    -webkit-border-radius: @radius;
+}
+.box-sizing(@border-box:border-box) {
+    box-sizing: @border-box;
+    -moz-box-sizing: @border-box;
+    -webkit-box-sizing: @border-box;
+}
+//透明度
+.opacity(@opacity:.5) {
+    opacity: @opacity;
+    -moz-opacity: @opacity;
+    -webkit-opacity: @opacity;
+    @opacity2: @opacity*100;
+    filter:alpha(opacity=@opacity2);
+}
+.transition(@time:.6s) {
+    transition: all @time;
+    -moz-transition: all @time;
+    -webkit-transition: all @time;
+}
+.text-overflow() {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    word-break: break-all;
+    text-overflow: ellipsis;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html {
+    font-size: 14px;
+    width: 100%;
+    overflow-x: hidden;
+}
+body {
+    font-family: PingFangSC-Light,'helvetica neue','hiragino sans gb',tahoma,'microsoft yahei ui','microsoft yahei',simsun,sans-serif;
+    position: relative;
+}
+a,
+a:hover {
+    text-decoration: none;
+    outline: none;
+}
+a {
+    color: #3a3a3a;
+}
+a:hover {
+    color: #288f54;
+}
+.containter {
+    width: 1180px;
+    margin: 0 auto;
+}
+.clear {
+    clear: both !important;
+}
+.left {
+    float: left !important;
+}
+.right {
+    float: right !important;
+}
+.f_12 {
+    font-size: 12px !important;
+}
+.f_14 {
+    font-size: 14px !important;
+}
+.f_b {
+    font-weight: bold !important;
+}

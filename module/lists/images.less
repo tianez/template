@@ -1,0 +1,55 @@
+.images {
+    @color: #666; //a字体颜色
+    @hover: #fff; //a：hover字体颜色
+    @border: #E8F0F1; //下边框颜色
+    @background: #288f54; // a：hover背景颜色
+    @width:250px; //图片宽度
+    @width2:234px; //图片标题宽度，兼容ie6写法，减掉左右padding值
+    margin: 0 auto;
+    padding-top: 35px;
+    width: 1080px;
+    .image {
+        width: @width;
+        margin: 10px;
+        position: relative;
+        float: left;
+        display: block;
+        _zoom: 1;
+        *display: inline;
+        .figure {
+            position: relative;
+            color: #000;
+            border: 0;
+            display: block;
+            background: #f3f3f3;
+            cursor: pointer;
+            &:hover {
+                color: @hover;
+                background: @background;
+                font-weight: bold;
+            }
+        }
+        img {
+            width: @width;
+            height: 175px;
+            border: 0;
+            display: block;
+        }
+        .figcaption {
+            position: relative;
+            text-align: left;
+            line-height: 20px;
+            height: 30px;
+            *height: 24px;
+            *width: @width2;
+            overflow: hidden;
+            vertical-align: middle;
+            display: table-cell;
+            *display: block;
+            font-size: 14px;
+            padding: 3px 8px;
+            text-align: center;
+            .text-overflow();
+        }
+    }
+}

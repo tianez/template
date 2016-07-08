@@ -1,0 +1,25 @@
+{
+  "name": "myreact",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "tianez"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "bower",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "~4.5.0",
+    "animate.css": "~3.5.0",
+    "normalize-css": "~4.0.0"
+  }
+}

@@ -1,0 +1,53 @@
+.posts {
+    @color: #666; //a字体颜色
+    @hover: #f00; //a：hover字体颜色
+    @border: #E8F0F1; //下边框颜色
+    @background: #E8F0F1; // a：hover背景颜色
+    width: 860px;
+    margin: 0 auto;
+    padding-top: 35px;
+    .article-item {
+        display: block;
+        height: 50px;
+        line-height: 50px;
+        padding: 0 150px 0 35px;
+        position: relative;
+        cursor: pointer;
+        border-bottom: 1px dashed @border;
+        .article-time,
+        .article-view {
+            position: absolute;
+            color: #999;
+            font-size: 12px;
+        }
+        .article-time {
+            right: 8px;
+        }
+        .article-view {
+            right: 90px;
+        }
+        .article-number {
+            position: absolute;
+            left: 8px;
+            font-family: Georgia;
+            font-style: italic;
+            color: #999;
+        }
+        .article-title {
+            width: 100%;
+            cursor: pointer;
+            color: @color;
+            .text-overflow();
+        }
+    }
+    a:hover {
+        background: #F7F8FA;
+        border-left: 3px solid @hover;
+        .article-time,
+        .article-view,
+        .article-number,
+        .article-title {
+            color: @hover;
+        }
+    }
+}
