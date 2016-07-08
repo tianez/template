@@ -45,23 +45,23 @@
 /***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(9);
+	module.exports = __webpack_require__(8);
 
 
 /***/ },
 
-/***/ 9:
+/***/ 8:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	// import './dist/css/style.css'
 	// import './app/sass/style.scss'
 
-	__webpack_require__(10);
+	__webpack_require__(9);
 
 /***/ },
 
-/***/ 10:
+/***/ 9:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin

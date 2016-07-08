@@ -12,7 +12,7 @@
 .opacity(@opacity:.5) {
     opacity: @opacity;
     -moz-opacity: @opacity;
-    -webkit-opacity: @opacity; 
+    -webkit-opacity: @opacity;
     @opacity2: @opacity*100;
     filter:alpha(opacity=@opacity2);
 }
@@ -29,6 +29,8 @@
     text-overflow: ellipsis;
 }
 * {
+    margin: 0;
+    padding: 0;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -38,21 +40,46 @@ html {
     width: 100%;
     overflow-x: hidden;
 }
-body {
+
+/* 设置默认字体 */
+body,
+button, input, select, textarea { /* for ie */
+    font-size: 14px;
     font-family: PingFangSC-Light,'helvetica neue','hiragino sans gb',tahoma,'microsoft yahei ui','microsoft yahei',simsun,sans-serif;
-    position: relative;
 }
+
 a,
 a:hover {
-    text-decoration: none;
     outline: none;
 }
 a {
     color: #3a3a3a;
+    text-decoration: none;
 }
 a:hover {
     color: #288f54;
+    text-decoration: underline;
 }
+
+fieldset, img { border: none; } /* img 搭车：让链接里的 img 无边框 */
+
+address, cite, dfn, em, var { font-style: normal; } /* 将斜体扶正 */
+
+/* 重置列表元素 */
+ul, ol { list-style: none; }
+
+/* 重置表格元素 */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* 重置 hr */
+hr {
+    border: none;
+    height: 1px;
+}
+
 .containter {
     width: 1180px;
     margin: 0 auto;
