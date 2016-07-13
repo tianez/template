@@ -1,3 +1,23 @@
+/* 横向换行 */
+.flex-wrap {
+  /* 09版 */
+  -webkit-box-lines: multiple;
+  /* 12版 */
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+/* 子元素-平均分栏 */
+.flex1 {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
 * {
   margin: 0;
   padding: 0;
@@ -84,6 +104,7 @@ hr {
 }
 html {
   color: #fff;
+  font-size: 0.3125vw;
 }
 body,
 html {
@@ -91,95 +112,186 @@ html {
   height: 100%;
 }
 .containter {
+  display: box;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  /* 09版 */
+  -webkit-box-orient: horizontal;
+  /* 12版 */
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  justify-content: space-between;
+  -moz-box-pack: space-between;
+  -webkit-box-pack: space-between;
+  box-pack: space-between;
   width: 100%;
-  max-width: 360px;
-  height: 100%;
-  min-height: 500px;
-  overflow: auto;
+  min-height: 100%;
+  overflow-x: hidden;
   background: #ccc;
+  /* 09版 */
+  -webkit-box-orient: vertical;
+  /* 12版 */
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  align-content: flex-start;
   flex-wrap: wrap;
   position: relative;
-  padding-top: 100px;
 }
-.containter .div1 {
-  min-width: 100%;
-  height: 100px;
-  max-height: 100px;
-  flex-grow: 1;
+.containter .header {
+  width: 100vw;
+  height: 36.5vw;
+  max-height: 36.5vw;
   background: #f00;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
-.containter .divd {
-  flex-grow: 1;
+.containter .header img {
   width: 100%;
   height: 100%;
-  min-height: 400px;
 }
-.containter .div2 {
+.containter .center {
   width: 100%;
-  height: 100%;
-  background: #000;
-}
-.containter .div2 div {
-  width: 33.33%;
-  height: 50%;
-  float: left;
-}
-.containter .div2 .div5 {
-  background: #f00;
-  flex-direction: column;
+  min-height: 200px;
+  flex-grow: 1;
+  display: box;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  /* 09版 */
+  -webkit-box-orient: horizontal;
+  /* 12版 */
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  justify-content: space-around;
+  -moz-box-pack: space-around;
+  -webkit-box-pack: space-around;
+  box-pack: space-around;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  /* 09版 */
+  -webkit-box-orient: vertical;
+  /* 12版 */
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.containter .center .c1,
+.containter .center .c2,
+.containter .center .c3 {
+  width: 95%;
+  height: 200px;
+  width: 95vw;
+  height: 30vw;
+  display: box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  /* 09版 */
+  -webkit-box-orient: horizontal;
+  /* 12版 */
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
   justify-content: center;
   -moz-box-pack: center;
   -webkit-box-pack: center;
   box-pack: center;
-  align-items: center;
-  -moz-box-align: center;
   -webkit-box-align: center;
+  -moz-box-align: center;
   box-align: center;
-  -webkit-align-content: center;
-  align-content: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
 }
-.containter .div2 .div5 .d1 {
-  color: #fff;
+.containter .center .c1 {
+  background: #0f0;
+  box-shadow: 2px 2px 5px -1px #000;
 }
-.containter .div2 .div6 {
-  background: #111;
+.containter .center .c1 .d {
+  width: 23%;
+  height: 20px;
+  height: 19vw;
+  background: #00f;
+  border-right: 2px solid #000;
 }
-.containter .div2 .div7 {
-  background: #222;
+.containter .center .c2 {
+  margin: 2vw 0;
+  /* 09版 */
+  -webkit-box-orient: vertical;
+  /* 12版 */
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  /* 09版 */
+  -webkit-box-lines: multiple;
+  /* 12版 */
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  -moz-box-pack: space-between;
+  -webkit-box-pack: space-between;
+  box-pack: space-between;
+  -webkit-align-content: space-between;
+  align-content: space-between;
 }
-.containter .div2 .div8 {
-  background: #333;
+.containter .center .c2 .d {
+  width: 160px;
+  width: 45vw;
+  height: 45%;
+  background: #f00;
+  box-shadow: 2px 2px 5px -1px #000;
+  border-bottom: 2px solid #000;
 }
-.containter .div2 .div9 {
-  background: #444;
+.containter .center .c2 .d3 {
+  height: 100%;
+  font-size: 10vw;
 }
-.containter .div2 .div10 {
-  background: #555;
+.containter .center .c3 {
+  background: #ddd;
 }
-.containter .div3 {
-  width: 200px;
-  height: 100px;
-  background: #090;
+.containter .center .c3 .d {
+  width: 33.33%;
+  height: 30px;
+  height: 19vw;
+  background: #f0f;
+  border-right: 2px solid #000;
 }
-.containter .div4 {
-  width: 200px;
-  height: 100px;
+.containter .footer {
+  width: 100vw;
+  height: 45px;
+  height: 20vw;
+  max-height: 36.5vw;
   background: #666;
 }
