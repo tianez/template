@@ -240,6 +240,7 @@ html {
   height: 19vw;
   background: #00f;
   border-right: 2px solid #000;
+  text-align: center;
 }
 .containter .center .c2 {
   margin: 2vw 0;
