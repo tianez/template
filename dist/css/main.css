@@ -114,13 +114,6 @@ html {
 @media screen and (orientation: portrait) {
 }
 @media screen and (orientation: landscape) {
-  html {
-    color: #fff;
-    font-size: 0.15625vw;
-  }
-  body {
-    width: 50%;
-  }
 }
 .containter {
   display: box;
@@ -157,9 +150,9 @@ html {
   position: relative;
 }
 .containter .header {
-  width: 100vw;
-  height: 36.5vw;
-  max-height: 36.5vw;
+  width: 100%;
+  height: 116rem;
+  max-height: 116rem;
   background: #f00;
 }
 .containter .header img {
@@ -212,9 +205,8 @@ html {
 .containter .center .c1,
 .containter .center .c2,
 .containter .center .c3 {
-  width: 95%;
+  width: 300rem;
   height: 200px;
-  width: 95vw;
   height: 30vw;
   display: box;
   display: -webkit-box;
