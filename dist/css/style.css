@@ -1,0 +1,748 @@
+/* 横向换行 */
+.flex-wrap {
+  /* 09版 */
+  -webkit-box-lines: multiple;
+  /* 12版 */
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+/* 子元素-平均分栏 */
+.flex1 {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  width: 100%;
+  overflow-x: hidden;
+}
+/* 设置默认字体 */
+body,
+button,
+input,
+select,
+textarea {
+  /* for ie */
+  font-size: 14px;
+  font-family: 'microsoft yahei', PingFangSC-Light, 'helvetica neue', 'hiragino sans gb', tahoma, 'microsoft yahei ui', simsun, sans-serif;
+}
+a,
+a:hover {
+  outline: none;
+  text-decoration: none;
+}
+a {
+  color: #3a3a3a;
+}
+a:hover {
+  color: #288f54;
+}
+fieldset,
+img {
+  border: none;
+}
+/* img 搭车：让链接里的 img 无边框 */
+address,
+cite,
+dfn,
+em,
+var {
+  font-style: normal;
+}
+/* 将斜体扶正 */
+/* 重置列表元素 */
+ol,
+ul {
+  list-style: none;
+}
+/* 重置表格元素 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* 重置 hr */
+hr {
+  border: none;
+  height: 1px;
+}
+.containter {
+  width: 1180px;
+  margin: 0 auto;
+}
+.clear {
+  clear: both !important;
+}
+.left {
+  float: left !important;
+}
+.right {
+  float: right !important;
+}
+.f_12 {
+  font-size: 12px !important;
+}
+.f_14 {
+  font-size: 14px !important;
+}
+.f_b {
+  font-weight: bold !important;
+}
+/*
+ * Swiper 2.7.0
+ * Mobile touch slider and framework with hardware accelerated transitions
+ *
+ * http://www.idangero.us/sliders/swiper/
+ *
+ * Copyright 2010-2014, Vladimir Kharlampidi
+ * The iDangero.us
+ * http://www.idangero.us/
+ *
+ * Licensed under GPL & MIT
+ *
+ * Released on: August 30, 2014
+*/
+/* ===============================================================
+Basic Swiper Styles
+================================================================*/
+.swiper-container {
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  /* Fix of Webkit flickering */
+  z-index: 1;
+}
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  -webkit-transition-property: -webkit-transform, left, top;
+  -webkit-transition-duration: 0s;
+  -webkit-transform: translate3d(0px, 0, 0);
+  -webkit-transition-timing-function: ease;
+  -moz-transition-property: -moz-transform, left, top;
+  -moz-transition-duration: 0s;
+  -moz-transform: translate3d(0px, 0, 0);
+  -moz-transition-timing-function: ease;
+  -o-transition-property: -o-transform, left, top;
+  -o-transition-duration: 0s;
+  -o-transform: translate3d(0px, 0, 0);
+  -o-transition-timing-function: ease;
+  -o-transform: translate(0px, 0px);
+  -ms-transition-property: -ms-transform, left, top;
+  -ms-transition-duration: 0s;
+  -ms-transform: translate3d(0px, 0, 0);
+  -ms-transition-timing-function: ease;
+  transition-property: transform, left, top;
+  transition-duration: 0s;
+  transform: translate3d(0px, 0, 0);
+  transition-timing-function: ease;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.swiper-free-mode > .swiper-wrapper {
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+  -ms-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  margin: 0 auto;
+}
+.swiper-slide {
+  float: left;
+}
+/* IE10 Windows Phone 8 Fixes */
+.swiper-wp8-horizontal {
+  -ms-touch-action: pan-y;
+}
+.swiper-wp8-vertical {
+  -ms-touch-action: pan-x;
+}
+/* ===============================================================
+Your custom styles, here you need to specify container's and slide's
+sizes, pagination, etc.
+================================================================*/
+.swiper-container {
+  /* Specify Swiper's Size: */
+  /*width:200px;
+	height: 100px;*/
+}
+.swiper-slide {
+  /* Specify Slides's Size: */
+  /*width: 100%;
+	height: 100%;*/
+}
+.swiper-slide-active {
+  /* Specific active slide styling: */
+}
+.swiper-slide-visible {
+  /* Specific visible slide styling: */
+}
+/* ===============================================================
+Pagination Styles
+================================================================*/
+.swiper-pagination-switch {
+  /* Stylize pagination button: */
+}
+.swiper-active-switch {
+  /* Specific active button style: */
+}
+.swiper-visible-switch {
+  /* Specific visible button style: */
+}
+.device {
+  width: 640px;
+  height: 300px;
+  position: relative;
+}
+.device .swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.device .swiper-container .swiper-slide {
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  height: 100%;
+  overflow: hidden;
+}
+.device .swiper-container .swiper-slide img {
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+.device .swiper-container .swiper-slide .p {
+  position: relative;
+  cursor: pointer;
+  left: 0;
+  bottom: 40px;
+  padding: 0 15px;
+  z-index: 99;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+}
+.device .swiper-container .swiper-slide .p p {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  word-break: break-all;
+  text-overflow: ellipsis;
+}
+.device .swiper-container .swiper-slide .bg {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  _bottom: 0;
+  background: #000;
+  width: 100%;
+  height: 40px;
+  z-index: 90;
+  opacity: 0.5;
+  -moz-opacity: 0.5;
+  -webkit-opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+.device .swiper-container .swiper-slide:hover p {
+  color: #f00;
+}
+.device .arrow-left,
+.device .arrow-right {
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  margin-top: -15px;
+  width: 17px;
+  height: 30px;
+  cursor: pointer;
+}
+.device .arrow-left {
+  background: url(../images/arrows.png) no-repeat left top;
+  left: 10px;
+}
+.device .arrow-right {
+  background: url(../images/arrows.png) no-repeat left bottom;
+  right: 10px;
+}
+.device .pagination {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 20px;
+  width: 100%;
+  text-align: center;
+}
+.device .pagination .swiper-pagination-switch {
+  font-size: 0;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background: #999;
+  margin: 0 3px;
+  cursor: pointer;
+}
+.device .pagination .swiper-active-switch {
+  background: #fff;
+}
+.nav {
+  position: relative;
+  background: #ddd;
+  z-index: 999;
+}
+.nav .nav_u {
+  text-align: center;
+}
+.nav .nav_u .nav_l {
+  display: inline-block;
+  position: relative;
+}
+.nav .nav_u .nav_l .nav_a {
+  font-size: 18px;
+  line-height: 60px;
+  height: 60px;
+  font-weight: bold;
+  color: #fff;
+  padding: 0 28px;
+  *padding: 0 30px;
+  display: inline-block;
+}
+.nav .nav_u .nav_l .n_u {
+  position: absolute;
+  width: 100%;
+  display: none;
+  background: #d6e8da;
+  z-index: 9999;
+  padding: 0 0 10px;
+}
+.nav .nav_u .nav_l .n_u .n_l {
+  text-align: center;
+  line-height: 32px;
+}
+.nav .nav_u .nav_l .n_u .n_l .n_a {
+  display: block;
+  color: #3a3a3a;
+}
+.nav .nav_u .nav_l .n_u .n_l .n_a:hover {
+  background: #288f54;
+  color: #fff;
+}
+.nav .nav_u .nav_l:hover .nav_a {
+  background: #fff;
+  opacity: 0.8;
+  -moz-opacity: 0.8;
+  -webkit-opacity: 0.8;
+  filter: alpha(opacity=80);
+  color: #f00;
+}
+.nav .nav_u .nav_l:hover .n_u {
+  display: block;
+}
+.posts2 {
+  width: 1180px;
+  margin: 0 auto;
+  padding-top: 35px;
+}
+.posts2 .article-item {
+  position: relative;
+  float: left;
+  display: block;
+  width: 550px;
+  line-height: 1.5;
+  margin: 0 20px 40px;
+  *margin: 0 19px 40px;
+  _margin: 0 15px 40px;
+  color: #4f4f4f;
+  background-color: #fff;
+  border: 1px solid #e8e8e8;
+  -webkit-transition: box-shadow 0.3s ease-in, -webkit-transform 0.2s ease-in;
+  transition: box-shadow 0.3s ease-in, transform 0.2s ease-in;
+}
+.posts2 .article-item .item-banner {
+  height: 200px;
+  overflow: hidden;
+  background-size: 100% auto;
+}
+.posts2 .article-item .item-banner img {
+  width: 550px;
+  height: 200px;
+}
+.posts2 .article-item .item-title {
+  padding: 12px 20px 0;
+}
+.posts2 .article-item .item-title h3 {
+  width: 100%;
+  overflow: hidden;
+  font-size: 20px;
+  font-weight: 400;
+  white-space: nowrap;
+  word-wrap: normal;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+.posts2 .article-item .item-title h3 a {
+  color: #4f4f4f;
+}
+.posts2 .article-item .item-footer {
+  padding: 0 20px 12px;
+  height: 36px;
+  line-height: 24px;
+  font-size: 16px;
+}
+.posts2 .article-item .item-footer .author {
+  float: left;
+}
+.posts2 .article-item .item-footer .count {
+  float: right;
+}
+.posts2 .article-item .item-footer .count li {
+  float: left;
+  margin-left: 15px;
+  background-image: url(../images/icon@1x.png);
+  background-repeat: no-repeat;
+  color: #d2d2d2;
+}
+.posts2 .article-item .item-footer .count .view {
+  padding-left: 25px;
+  background-position: 0 5px;
+}
+.posts2 .article-item .item-footer .count .like {
+  padding-left: 20px;
+  background-position: 0 -13px;
+}
+.posts2 .article-item .item-footer .count .comments {
+  padding-left: 20px;
+  background-position: 0 -35px;
+}
+.posts2 .article-item:hover {
+  -webkit-transform: translate(0, -2px);
+  transform: translate(0, -2px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+.RoyalSlider {
+  width: 600px;
+  height: 400px;
+  position: relative;
+  direction: ltr;
+  margin: 15px 0 55px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.RoyalSlider .rsOverflow {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  float: left;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.RoyalSlider .rsOverflow .rsContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.RoyalSlider .rsGCaption {
+  width: 100%;
+  position: absolute;
+  float: none;
+  bottom: -35px;
+  left: 0;
+  z-index: 99;
+  text-align: center;
+  font-size: 12px;
+  line-height: 30px;
+  color: #5b322e;
+}
+.rsArrow,
+.rsThumbsArrow {
+  cursor: pointer;
+}
+.rsThumb {
+  float: left;
+  position: relative;
+}
+.rsArrow,
+.rsNav,
+.rsThumbsArrow {
+  opacity: 1;
+  -webkit-transition: opacity 0.3s linear;
+  -moz-transition: opacity 0.3s linear;
+  -o-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+}
+.rsHidden {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: visibility 0s linear 0.3s,opacity 0.3s linear;
+  -moz-transition: visibility 0s linear 0.3s,opacity 0.3s linear;
+  -o-transition: visibility 0s linear 0.3s,opacity 0.3s linear;
+  transition: visibility 0s linear 0.3s,opacity 0.3s linear;
+}
+.RoyalSlider .rsSlide.rsFakePreloader {
+  opacity: 1 !important;
+  -webkit-transition: 0s;
+  -moz-transition: 0s;
+  -o-transition: 0s;
+  transition: 0s;
+  display: none;
+}
+.rsSlide {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+.RoyalSlider.rsAutoHeight,
+.rsAutoHeight .rsSlide {
+  height: auto;
+}
+.rsContent {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.rsPreloader {
+  position: absolute;
+  z-index: 0;
+}
+.rsNav {
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.rsNavItem {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.25);
+}
+.rsThumbs {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  float: left;
+  z-index: 22;
+}
+.rsTabs {
+  float: left;
+  background: none !important;
+}
+.rsTabs,
+.rsThumbs {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.RsDefault,
+.RsDefault .rsOverflow,
+.RsDefault .rsSlide,
+.RsDefault .rsVideoFrameHolder,
+.RsDefault .rsThumbs {
+  color: #5b322e;
+  margin: 0 auto;
+}
+.RsDefault .rsArrow {
+  height: 100%;
+  width: 48%;
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  z-index: 21;
+}
+.RsDefault.rsVer .rsArrow {
+  width: 100%;
+  height: 44px;
+}
+.RsDefault.rsVer .rsArrowLeft {
+  top: 0;
+  left: 0;
+}
+.RsDefault.rsVer .rsArrowRight {
+  bottom: 0;
+  left: 0;
+}
+.RsDefault.rsHor .rsArrowLeft {
+  left: 0;
+  top: 0;
+}
+.RsDefault.rsHor .rsArrowRight {
+  right: 0;
+  top: 0;
+}
+.RsDefault .rsArrowIcn {
+  width: 38px;
+  height: 38px;
+  top: 50%;
+  left: 0;
+  margin-top: -19px;
+  position: absolute;
+  cursor: pointer;
+  background: url(../images/sprite.png);
+}
+.RsDefault.rsHor .rsArrowLeft .rsArrowIcn {
+  background-position: -151px -316px;
+  left: 10px;
+}
+.RsDefault.rsHor .rsArrowRight .rsArrowIcn {
+  background-position: -229px -316px;
+  left: auto;
+  right: 10px;
+}
+.RsDefault.rsVer .rsArrowLeft .rsArrowIcn {
+  background-position: -151px -316px;
+  left: 10px;
+}
+.RsDefault.rsVer .rsArrowRight .rsArrowIcn {
+  background-position: -229px -316px;
+  left: auto;
+  right: 10px;
+}
+.RsDefault .rsArrowDisabled .rsArrowIcn {
+  opacity: .2;
+  filter: alpha(opacity=20);
+  *display: none;
+}
+.RsDefault .rsThumbsHor {
+  width: 100%;
+  height: 100px;
+  margin-top: 40px;
+}
+.RsDefault .rsThumbsHor:hover .rsThumbsArrow {
+  display: block;
+}
+.RsDefault .rsThumbsVer {
+  width: 130px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.RsDefault .rsThumb {
+  float: left;
+  overflow: hidden;
+  width: 112px;
+  height: 80px;
+  border: 2px solid #dbdbdb;
+  padding: 3px;
+}
+.RsDefault .rsThumb img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+  margin: 0;
+}
+.RsDefault .rsNavSelected {
+  border-color: #9c8080;
+}
+.RsDefault .rsNavSelected img {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.RsDefault .rsThumbsArrow {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  display: none;
+  cursor: pointer;
+  z-index: 21;
+}
+.RsDefault .rsFullscreenBtn {
+  right: 0;
+  top: 0;
+  width: 44px;
+  height: 44px;
+  z-index: 22;
+  display: block;
+  position: absolute;
+  cursor: pointer;
+}
+.RsDefault .rsTmb {
+  display: block;
+}
+.RsDefault .rsThumbsArrowDisabled {
+  opacity: .3 !important;
+  filter: alpha(opacity=30) !important;
+}
+.RsDefault a.rsImg {
+  width: 100%;
+  display: block;
+  padding: 20px 0;
+  font-size: 12px;
+  line-height: 30px;
+  text-align: center;
+}
+.rsWithThumbsVer .rsThumbsContainer {
+  position: relative;
+  width: 100%;
+}
+.rsWithThumbsVer .rsThumbsArrow {
+  width: 100%;
+  height: 20px;
+}
+.rsWithThumbsVer .rsThumbsArrowLeft {
+  top: 50px;
+  left: 0;
+}
+.rsWithThumbsVer .rsThumbsArrowRight {
+  bottom: 0;
+  left: 0;
+}
+.rsWithThumbsHor .rsThumbsContainer {
+  position: relative;
+  height: 100%;
+}
+.rsWithThumbsHor .rsThumbsArrowLeft {
+  left: 8px;
+  top: 65px;
+}
+.rsWithThumbsHor .rsThumbsArrowLeft .rsThumbsArrowIcn {
+  background-position: -200px -392px;
+}
+.rsWithThumbsHor .rsThumbsArrowRight {
+  right: 8px;
+  top: 65px;
+}
+.rsWithThumbsHor .rsThumbsArrowRight .rsThumbsArrowIcn {
+  background-position: -280px -392px;
+}
+.rsFullscreen {
+  position: fixed !important;
+  height: auto !important;
+  width: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  z-index: 2147483647 !important;
+  top: 0 !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  right: 0 !important;
+}
+.rsFullscreen .rsFullscreenIcn {
+  background-position: -32px 0;
+}
+.rsFullscreen:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
