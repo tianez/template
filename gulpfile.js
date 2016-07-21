@@ -39,6 +39,7 @@ gulp.task('less', function() {
         .pipe(cleanCSS({
             compatibility: 'ie8'
         }))
+        .pipe(rev())
         .pipe(rename({
             suffix: '-min'
         }))

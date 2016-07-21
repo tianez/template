@@ -1,0 +1,20 @@
+@import 'base.layout.less';
+.dot {
+    height: 2px;
+    width: 2px;
+    border-radius: 100%;
+    position: absolute;
+    z-index: 0;
+    animation: sploosh 3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background: transparent;
+}
+@keyframes sploosh {
+    0% {
+        box-shadow: 0 0 0 0 rgba(66, 166, 223, 0.7);
+        background: rgba(66, 166, 223, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 0 300px rgba(66, 166, 223, 0);
+        background: rgba(66, 166, 223, 0);
+    }
+}
