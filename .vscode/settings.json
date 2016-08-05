@@ -11,7 +11,7 @@
         "**/node_modules": true
     },
     // 是否启用了 GIT
-    "git.enabled": false,
+    "git.enabled": true,
     // File extensions that can be beautified as CSS.
     "beautify.CSSfiles": [
         "css",
