@@ -1,7 +1,7 @@
 {
   "name": "sfz",
   "version": "1.0.0",
-  "description": "尚风寨",
+  "description": "我的模板",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
