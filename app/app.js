@@ -1,4 +1,4 @@
 'use strict'
 // import './dist/css/style.css'
 // import './app/sass/style.scss'
-import './less/main.less'
+import './less/style.less'
