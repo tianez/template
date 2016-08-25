@@ -19,6 +19,7 @@
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
     "gulp": "^3.9.1",
+    "gulp-assetpaths": "^0.2.0",
     "gulp-clean-css": "^2.0.6",
     "gulp-concat": "^2.6.0",
     "gulp-connect": "^4.0.0",
@@ -36,10 +37,10 @@
     "gulp-webpack": "^1.5.0",
     "less": "^2.6.1",
     "less-loader": "^2.2.3",
+    "run-sequence": "^1.2.1",
     "sass-loader": "^3.2.0",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
-    "run-sequence": "^1.2.1",
     "webpack": "^1.12.14",
     "webpack-dev-server": "^1.14.1"
   }

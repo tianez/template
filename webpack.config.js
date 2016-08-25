@@ -33,12 +33,12 @@ module.exports = {
 		}, { //图片
 			test: /\.(png|jpg)$/,
 			// loader: 'url?limit=25000',
-			loader: 'url?limit=25000&name=dist/images/[name].[ext]',
+			loader: 'url?limit=25000&name=app/css/images/[name].[ext]',
 
 		}]
 	},
 	plugins: [
-			new ExtractTextPlugin("dist/css/webpack.css")
+			new ExtractTextPlugin("app/css/webpack.css")
 		]
 		// devtool: 'source-map'
 }
