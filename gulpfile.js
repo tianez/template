@@ -150,7 +150,3 @@ gulp.task('default', [
     'webserver',
     'watch'
 ])
-
-// gulp.task('default', function(cb) {
-//     runSequence('webserver', 'web', 'watch', cb);
-// });
