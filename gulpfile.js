@@ -141,7 +141,7 @@ gulp.task('webserver', function () {
 })
 
 gulp.task('watch', function () {
-    gulp.watch(['app/less/*.less', 'module/*/*.less'], ['less', 'map'])
+    gulp.watch(['app/less/*.less', 'module/*/*.less'], ['less'])
     gulp.watch(['app/sass/*.scss'], ['sass'])
     gulp.watch(['app/html/*', 'module/*/*.html'], ['html'])
 })
