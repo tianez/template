@@ -134,6 +134,7 @@ hr {
   width: 100%;
   height: 4.2rem;
   position: fixed;
+  z-index: 9999;
   top: 0;
   left: 0;
   line-height: 4.4rem;
@@ -147,4 +148,59 @@ hr {
 }
 .header ~ .content {
   margin-top: 4.2rem;
+}
+.content {
+  position: relative;
+  z-index: 9;
+}
+.footer ~ .content {
+  padding-bottom: 4.4rem;
+}
+.footer {
+  position: fixed;
+  z-index: 9999;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4.4rem;
+  line-height: 4.4rem;
+  background: #000;
+  color: #fff;
+}
+.footer .meun {
+  display: box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  /* 09版 */
+  -webkit-box-orient: horizontal;
+  /* 12版 */
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  justify-content: center;
+  -moz-box-pack: center;
+  -webkit-box-pack: center;
+  box-pack: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+}
+.footer a {
+  color: #fff;
+  display: block;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  text-align: center;
 }

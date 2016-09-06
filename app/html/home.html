@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html> 
 
 <head>
     <meta charset="utf-8">
@@ -10,10 +10,11 @@
 </head>
 
 <body>
-    @include('./module/header/index.html')
+    @include('app/html/header.layout.html')
     <div class="content">
          @include('./module/article/index.html')
     </div>
+    @include('app/html/footer.layout.html') 
 </body>
-
+ 
 </html>
