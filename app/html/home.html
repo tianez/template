@@ -7,13 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     <title>静态模板</title>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <link rel="apple-touch-icon-precomposed" href="http://3gimg.qq.com/wap30/info/info5/img/logo_icon.png">
 </head>
 
 <body>
-    <div class="containter">
-
-        @include('./module/naver/1.html') @include('./module/swiper/1.html')
+    @include('./module/header/index.html')
+    <div class="content">
+         @include('./module/article/index.html')
     </div>
 </body>
 
