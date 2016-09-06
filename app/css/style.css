@@ -152,9 +152,7 @@ hr {
 .content {
   position: relative;
   z-index: 9;
-}
-.footer ~ .content {
-  padding-bottom: 4.4rem;
+  padding-bottom: 4rem;
 }
 .footer {
   position: fixed;

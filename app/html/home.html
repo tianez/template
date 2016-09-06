@@ -8,13 +8,13 @@
     <title>静态模板</title>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
-
+  
 <body>
-    @include('app/html/header.layout.html')
+    @include('app/layout/header.html') 
     <div class="content">
-         @include('./module/article/index.html')
+         @include('app/layout/article.html')
     </div>
-    @include('app/html/footer.layout.html') 
+    @include('app/layout/footer.html') 
 </body>
- 
+  
 </html>

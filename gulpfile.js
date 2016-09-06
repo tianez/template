@@ -32,7 +32,7 @@ var webpackConfig = require('./webpack.config')
  * 编译less样式文件
  */
 gulp.task('less', function () {
-    gulp.src(['./app/less/*.less', '!app/less/*.layout.less'])
+    gulp.src(['./app/less/*.less'])
         // .pipe(sourcemaps.init())
         .pipe(less())
         // .pipe(sourcemaps.write())
@@ -93,7 +93,7 @@ gulp.task('js', function () {
  */
 var templatereplace = require('./app/html/template.json')
 gulp.task('html', function () {
-    gulp.src(['./app/html/*.html', '!app/html/*.layout.html'])
+    gulp.src(['./app/html/*.html'])
         .pipe(fileinclude({
             prefix: '@',
             basepath: './'
@@ -141,9 +141,9 @@ gulp.task('webserver', function () {
 })
 
 gulp.task('watch', function () {
-    gulp.watch(['app/less/*.less', 'module/*/*.less'], ['less'])
+    gulp.watch(['app/less/*.less', 'app/lessc/*.less'], ['less'])
     gulp.watch(['app/sass/*.scss'], ['sass'])
-    gulp.watch(['app/html/*', 'module/*/*.html'], ['html'])
+    gulp.watch(['app/html/*', 'app/layout/*.html'], ['html'])
 })
 
 gulp.task('default', [
