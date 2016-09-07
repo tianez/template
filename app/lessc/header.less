@@ -12,6 +12,32 @@
     h1 {
         font-size: 1.8rem;
         font-weight: normal;
+        position: relative;
+        z-index: 9;
+    }
+    .icon {
+        // background: #f00;
+        &,&:before,&:after {
+            width: 4.2rem;
+            height: 4.2rem;
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 999;
+        }
+        &:before,&:after {
+            content: "";
+        }
+        &.icon-left:before {
+            top: 1.3rem;
+            left: 1.6rem;
+            border-bottom: .1rem solid #333;
+            border-left: .1rem solid #333;
+            width: 1.6rem;
+            height: 1.6rem;
+            .transform(); 
+        }
     }
 }
 .header~.content {
