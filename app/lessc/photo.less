@@ -1,0 +1,34 @@
+.photo {
+    background: #000;
+    position: fixed;
+    z-index: 999999;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+    .swiper-wrapper {
+        width: 100%;
+        height: 100%;
+        .swiper-slide {
+            padding: 2rem;
+            max-width: 100%;
+            height: auto;
+            position: relative;
+            img {
+                position: relative;
+                display: block;
+                height: auto !important;
+                max-height: 100%;
+                top: 50%;
+                .transform(translateY(-50%));
+            }
+        }
+    }
+    .swiper-pagination-bullet {
+        background: #fff;
+    }
+}
